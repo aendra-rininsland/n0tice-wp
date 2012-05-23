@@ -4,37 +4,35 @@ jQuery(document).ready(function(){
 	var n = 0;
 	//This populates the search field when "New source" is clicked
 	var $i = 0;
+	var searchTop = '<div id="#source-' + $i + '" style="border: 1px solid black; margin: 10px 0px; padding: 0px 5px 5px 5px;">' +
+						'<h3>Search for n0tices:</h3>';
+						
+	var criteria =		'<div class="criterion">' +
+							'<select class="search-criteria">' +
+								'<option value="search">Headline/location search</option>'+
+								'<option value="user">User</option>'+
+								'<option value="n0ticeboard" selected>Noticeboard</option>'+
+								'<option value="type">Type</option>' +
+								'<option value="latlng">Latitude/Longitude</option>' +
+								'<option value="location">Location</option>' +
+							'</select>' +
+							'<input type="text" class="n0ticeboard-input source-n0ticeboard" />' +
+						'</div>';
+						
+
+	var searchBottom =	'<input type="submit" class="button-secondary add-another-criterion" onclick="return false" value="Add another criterion" style="margin: 10px 0px;" /><br />' +
+						'<strong>Return # latest n0tices:</strong>' + 
+						'<input type="text" class="num-n0tices" size="3" value="10" /> ' +
+						'<input type="submit" class="fetch button-primary" style="float: right;" value="Search" onclick="return false" />' +
+						'</div>';	
 	jQuery('#new-source').click(function(){
-		var searchTop = '<div id="#source-' + $i + '" style="border: 1px solid black; margin: 10px 0px; padding: 0px 5px 5px 5px;">' +
-							'<h3>Search for n0tices:</h3>';
-							
-		var criteria =		'<div class="criterion">' +
-								'<select class="search-criteria">' +
-									'<option value="search">Headline/location search</option>'+
-									'<option value="user">User</option>'+
-									'<option value="n0ticeboard" selected>Noticeboard</option>'+
-									'<option value="type">Type</option>' +
-									'<option value="latlng">Latitude/Longitude</option>' +
-									'<option value="location">Location</option>' +
-								'</select>' +
-								'<input type="text" class="n0ticeboard-input source-n0ticeboard" />' +
-							'</div>';
-							
-
-		var searchBottom =	'<input type="submit" class="button-secondary add-another-criterion" onclick="return false" value="Add another criterion" style="margin: 10px 0px;" /><br />' +
-							'<strong>Return # latest n0tices:</strong>' + 
-							'<input type="text" class="num-n0tices" size="3" value="10" /> ' +
-							'<input type="submit" class="fetch button-primary" style="float: right;" value="Search" onclick="return false" />' +
-							'</div>';
-		
 		jQuery('div#source-container').append(searchTop + criteria + searchBottom);
-		$i++;
-
-		jQuery(document).on('click', 'input.add-another-criterion', function(event){
-			jQuery(this).prev().after(criteria);
-		});		
-		
+		$i++;		
 	});
+	
+	jQuery(document).on('click', 'input.add-another-criterion', function(event){
+		jQuery(this).prev().after(criteria);
+	});			
 	
 
 	//This switches the fields around when the criterion type dropdown changes.

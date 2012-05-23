@@ -3,7 +3,7 @@
 Plugin Name: n0tice for WordPress
 Plugin URI: http://github.com/aendrew/n0tice-wp
 Description: Allows curation and displaying of n0tice content.
-Version: 0.2a
+Version: 0.2b
 Author: &#198;ndrew Rininsland
 Author URI: http://www.aendrew.com
 License: GPLv2
