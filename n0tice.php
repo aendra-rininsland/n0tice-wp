@@ -294,7 +294,7 @@ class WPN0tice {
 			}
 
 			$amount = $_POST['amount'];
-			$n0tices = wp_remote_get('http://n0ticeapis.com/1/search?' . $query); //get query via n0tice API
+			$n0tices = wp_remote_get('http://n0ticeapis.com/2/search?' . $query); //get query via n0tice API
 		
 			//There's currently no way to request n n0tices via the API, so unset all but first $amount.
 			$n0tices_array = json_decode($n0tices['body'], TRUE);
