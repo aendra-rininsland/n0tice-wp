@@ -1,0 +1,43 @@
+table#n0tice-table {
+	margin-bottom: 5px;
+}
+
+table#n0tice-table th, table#n0tice-table td {
+/*	border: 1px solid black;
+	padding: 5px;*/
+	text-align: center;
+}
+/*
+table#n0tice-table th {
+	background: #d7ffcb;
+}*/
+
+table#n0tice-table td.select {
+	text-align: left;
+	padding-left: 14px;
+}
+
+table#n0tice-table th.select {
+	width: 40px;
+	text-align: left;
+}
+
+table#n0tice-table h2 {
+	padding: 0px;
+	font-size: 18px;
+	line-height: 30px;
+	margin-top: -6px;
+	margin-bottom: 0px;
+}
+
+table#n0tice-table span.move-icon {
+	width: 16px;
+	height: 16px;
+	background: url(../img/222222_256x240_icons_icons.png) -128px -48px; 
+	display: block;
+	cursor: move;
+}
+
+table#n0tice-table td.middle {
+	vertical-align: middle;
+}
